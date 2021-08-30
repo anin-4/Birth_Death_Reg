@@ -1,0 +1,1135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".birth_details">
+
+        <TextView
+            android:id="@+id/permanent_add_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:text="@string/permanent_address"
+            android:background="@color/light_blue"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/address_line_1_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:hint="@string/address_line1"
+            app:counterEnabled="true"
+            app:helperText="required*"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:counterMaxLength="40"
+            app:endIconMode="clear_text"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/permanent_add_textView">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/address_line1_edit"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 "
+                android:maxLength="40"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/address_line_2_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:hint="@string/address_line_2"
+            app:counterEnabled="true"
+            app:helperText="required*"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:counterMaxLength="40"
+            app:endIconMode="clear_text"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address_line_1_layout">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/address_line2_edit"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 "
+                android:maxLength="40"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/address_line_3_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:hint="@string/address_line_3"
+            app:counterEnabled="true"
+            app:counterMaxLength="40"
+            app:endIconMode="clear_text"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address_line_2_layout">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/address_line3_edit"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 "
+                android:maxLength="40"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Country_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:helperText="required*"
+            android:hint="@string/select_country"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address_line_3_layout">
+
+            <AutoCompleteTextView
+                android:id="@+id/Country_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/state_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:helperText="required*"
+            android:hint="@string/select_state"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Country_layout">
+
+            <AutoCompleteTextView
+                android:id="@+id/state_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/district_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:helperText="required*"
+            android:hint="@string/select_district"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/state_layout">
+
+            <AutoCompleteTextView
+                android:id="@+id/district_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pin_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:hint="@string/pin"
+            app:counterEnabled="true"
+            app:counterMaxLength="6"
+            app:helperText="required*"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:endIconMode="clear_text"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/district_layout">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pin_edit"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:maxLength="6"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mobile_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:hint="@string/mobile_number"
+            app:helperText="required*"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:counterEnabled="true"
+            app:counterMaxLength="10"
+            app:endIconMode="clear_text"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pin_layout">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mobile_edit"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:maxLength="10"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:hint="@string/email_id"
+            app:counterEnabled="true"
+            app:counterMaxLength="40"
+            app:endIconMode="clear_text"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mobile_layout">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_edit"
+                android:layout_width="match_parent"
+                android:inputType="textWebEmailAddress"
+                android:maxLength="40"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890@_.- "
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/place_of_birth_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:text="@string/place_of_birth"
+            android:background="@color/light_blue"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email_layout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/address_line_1_pob_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:hint="@string/address_line1"
+            app:counterEnabled="true"
+            app:helperText="required*"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:counterMaxLength="40"
+            app:endIconMode="clear_text"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/place_of_birth_text">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/address_line1_pob_edit"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 "
+                android:maxLength="40"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/address_line_2_pob_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:hint="@string/address_line_2"
+            app:counterEnabled="true"
+            app:helperText="required*"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:counterMaxLength="40"
+            app:endIconMode="clear_text"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address_line_1_pob_layout">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/address_line2_pob_edit"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 "
+                android:maxLength="40"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/address_line_3_layout_pob"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:hint="@string/address_line_3"
+            app:counterEnabled="true"
+            app:counterMaxLength="40"
+            app:endIconMode="clear_text"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address_line_2_pob_layout">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/address_line3_edit_pob"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 "
+                android:maxLength="40"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Country_layout_pob"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:helperText="required*"
+            android:hint="@string/select_country"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address_line_3_layout_pob">
+
+            <AutoCompleteTextView
+                android:id="@+id/Country_edit_pob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/state_layout_pob"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:helperText="required*"
+            android:hint="@string/select_state"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Country_layout_pob">
+
+            <AutoCompleteTextView
+                android:id="@+id/state_edit_pob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/district_layout_pob"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            android:hint="@string/select_district"
+            app:helperText="required*"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/state_layout_pob">
+
+            <AutoCompleteTextView
+                android:id="@+id/district_edit_pob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pin_layout_pob"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:hint="@string/pin"
+            app:counterEnabled="true"
+            app:counterMaxLength="6"
+            app:helperText="required*"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:endIconMode="clear_text"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/district_layout_pob">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pin_edit_pob"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:maxLength="6"
+                android:layout_height="wrap_content"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/order_of_birth_layout_pob"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:hint="@string/order_of_birth"
+            app:counterEnabled="true"
+            app:counterMaxLength="6"
+            app:helperText="required*"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:endIconMode="clear_text"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pin_layout_pob">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/order_of_birth_edit_pob"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:maxLength="2"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/important_name_and_address_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:text="@string/important_name_and_address"
+            android:background="@color/light_blue"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/order_of_birth_layout_pob" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/informant_name_layout_important"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:hint="@string/informant_name"
+            app:counterEnabled="true"
+            app:counterMaxLength="40"
+            app:helperText="required*"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:endIconMode="clear_text"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/important_name_and_address_text">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/informant_name_edit_important"
+                android:layout_width="match_parent"
+                android:inputType="textCapCharacters"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                android:maxLength="40"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:id="@+id/radio_important"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/informant_name_layout_important"
+            android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/same_as_permanent_address_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/same_as_permanent_address"
+
+            />
+
+            <RadioButton
+                android:id="@+id/other_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/other"
+                android:checked="true"
+                />
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/address_line_1_layout_important"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:hint="@string/address_line1"
+            app:counterEnabled="true"
+            app:helperText="required*"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:counterMaxLength="40"
+            app:endIconMode="clear_text"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/radio_important">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/address_line1_edit_important"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 "
+                android:maxLength="40"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/address_line_2_important"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:hint="@string/address_line_2"
+            app:counterEnabled="true"
+            app:helperText="required*"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:counterMaxLength="40"
+            app:endIconMode="clear_text"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address_line_1_layout_important">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/address_line2_edit_important"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 "
+                android:maxLength="40"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/address_line_3_layout_important"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:hint="@string/address_line_3"
+            app:counterEnabled="true"
+            app:counterMaxLength="40"
+            app:endIconMode="clear_text"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address_line_2_important">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/address_line3_edit_important"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 "
+                android:maxLength="40"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Country_layout_important"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:helperText="required*"
+            android:hint="@string/select_country"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address_line_3_layout_important">
+
+            <AutoCompleteTextView
+                android:id="@+id/Country_edit_important"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/state_layout_important"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:helperText="required*"
+            android:hint="@string/select_state"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Country_layout_important">
+
+            <AutoCompleteTextView
+                android:id="@+id/state_edit_important"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/district_layout_important"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:helperText="required*"
+            android:hint="@string/select_district"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/state_layout_important">
+
+            <AutoCompleteTextView
+                android:id="@+id/district_edit_important"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pin_layout_important"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:hint="@string/pin"
+            app:counterEnabled="true"
+            app:counterMaxLength="6"
+            app:helperText="required*"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:endIconMode="clear_text"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/district_layout_important">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pin_edit_important"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:maxLength="6"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/address_of_parent_at_tob_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:text="@string/address_of_parent_at_time_of_birth"
+            android:background="@color/light_blue"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pin_layout_important" />
+
+        <RadioGroup
+            android:id="@+id/radio_address_of_parent_at_tob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address_of_parent_at_tob_text"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/same_as_permanent_address_radio_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/same_as_permanent_address"
+                />
+
+            <RadioButton
+                android:id="@+id/other_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/other"
+                android:checked="true"
+                />
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/address_line_1_layout_address_parent_tob"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:hint="@string/address_line1"
+            app:counterEnabled="true"
+            app:helperText="required*"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:counterMaxLength="40"
+            app:endIconMode="clear_text"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/radio_address_of_parent_at_tob">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/address_line1_edit_address_parent_dob"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 "
+                android:maxLength="40"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/address_line_2_address_parent_tob"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:hint="@string/address_line_2"
+            app:counterEnabled="true"
+            app:helperText="required*"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:counterMaxLength="40"
+            app:endIconMode="clear_text"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address_line_1_layout_address_parent_tob">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/address_line2_edit_address_parent_tob"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 "
+                android:maxLength="40"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/address_line_3_layout_address_parent_tob"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:hint="@string/address_line_3"
+            app:counterEnabled="true"
+            app:counterMaxLength="40"
+            app:endIconMode="clear_text"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address_line_2_address_parent_tob">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/address_line3_edit_address_parent_tob"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 "
+                android:maxLength="40"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Country_layout_address_parent_tob"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:helperText="required*"
+            android:hint="@string/select_country"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address_line_3_layout_address_parent_tob">
+
+            <AutoCompleteTextView
+                android:id="@+id/Country_edit_address_parent_tob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/state_layout_address_parent_tob"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:helperText="required*"
+            android:hint="@string/select_state"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Country_layout_address_parent_tob">
+
+            <AutoCompleteTextView
+                android:id="@+id/state_edit_address_parent_tob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/district_layout_address_parent_tob"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:helperText="required*"
+            android:hint="@string/select_district"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/state_layout_address_parent_tob">
+
+            <AutoCompleteTextView
+                android:id="@+id/district_edit_address_parent_tob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pin_layout_address_parent_tob"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:hint="@string/pin"
+            app:counterEnabled="true"
+            app:counterMaxLength="6"
+            app:helperText="required*"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:endIconMode="clear_text"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/district_layout_address_parent_tob">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pin_edit_address_parent_tob"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:maxLength="6"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/town_of_mother_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:text="@string/town_or_village_of_residence_of_mother"
+            android:background="@color/light_blue"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pin_layout_address_parent_tob" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/town_or_village_layout_town_of_mother"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:helperText="required*"
+            android:hint="@string/town_or_village"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/town_of_mother_text">
+
+            <AutoCompleteTextView
+                android:id="@+id/town_or_village_edit_town_of_mother"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/village_name_layout_town_of_mother"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:hint="@string/name_of_town_or_village"
+            app:counterEnabled="true"
+            app:counterMaxLength="40"
+            app:helperText="required*"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:endIconMode="clear_text"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/town_or_village_layout_town_of_mother">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/village_name_edit_address_parent_tob"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                android:maxLength="40"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Country_layout_town_of_mother"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:helperText="required*"
+            android:hint="@string/select_country"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/village_name_layout_town_of_mother">
+
+            <AutoCompleteTextView
+                android:id="@+id/Country_edit_town_of_mother"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/state_layout_town_of_mother"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:helperText="required*"
+            android:hint="@string/select_state"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Country_layout_town_of_mother">
+
+            <AutoCompleteTextView
+                android:id="@+id/state_edit_town_of_mother"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/district_layout_town_of_mother"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:helperText="required*"
+            android:hint="@string/select_district"
+            app:helperTextTextColor="@android:color/holo_red_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/state_layout_town_of_mother">
+
+            <AutoCompleteTextView
+                android:id="@+id/district_edit_town_of_mother"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:id="@+id/Prev_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/previous"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toStartOf="@id/next_address"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/district_layout_town_of_mother"/>
+        <Button
+            android:id="@+id/next_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/next"
+            android:layout_marginStart="@dimen/marginLeftRight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginLeftRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/Prev_address"
+            app:layout_constraintTop_toBottomOf="@id/district_layout_town_of_mother"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+</layout>

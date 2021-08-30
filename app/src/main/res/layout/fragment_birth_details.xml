@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".birth_details">
+
+    <TextView
+        android:id="@+id/dob_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="@dimen/marginLeftRight"
+        android:layout_marginTop="@dimen/marginTop"
+        android:hint="@string/date_of_birth_2"
+        android:textStyle="normal"
+        android:background="@drawable/border"
+        android:textSize="16sp"
+        android:layout_marginEnd="0dp"
+        app:layout_constraintEnd_toStartOf="@id/date_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <Button
+        android:id="@+id/date_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="@dimen/marginLeftRight"
+        android:text="@string/calender"
+        app:icon="@drawable/ic_baseline_calendar_today_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dob_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/gender_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginLeftRight"
+        android:layout_marginTop="@dimen/marginTop"
+        android:layout_marginEnd="@dimen/marginLeftRight"
+        app:helperText="required*"
+        android:hint="@string/gender"
+        android:padding="2dp"
+        app:helperTextTextColor="@android:color/holo_red_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dob_layout">
+
+        <AutoCompleteTextView
+            android:id="@+id/gender_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/child_first_name_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginLeftRight"
+        android:layout_marginTop="@dimen/marginTop"
+        android:hint="@string/child_first_name_CAP"
+        app:counterEnabled="true"
+        app:counterMaxLength="40"
+        app:endIconMode="clear_text"
+        android:layout_marginEnd="@dimen/marginLeftRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gender_layout">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/child_first_name_edit"
+            android:layout_width="match_parent"
+            android:maxLength="40"
+            android:inputType="textCapCharacters"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/child_middle_name_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginLeftRight"
+        android:layout_marginTop="@dimen/marginTop"
+        android:hint="@string/child_middle_name_CAP"
+        app:endIconMode="clear_text"
+        app:counterEnabled="true"
+        app:counterMaxLength="40"
+        android:layout_marginEnd="@dimen/marginLeftRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/child_first_name_layout">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/child_middle_name_edit"
+            android:layout_width="match_parent"
+            android:inputType="textCapCharacters"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:maxLength="40"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/child_last_name_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginLeftRight"
+        android:layout_marginTop="@dimen/marginTop"
+        android:hint="@string/child_last_name_CAP"
+        app:endIconMode="clear_text"
+        app:counterEnabled="true"
+        app:counterMaxLength="40"
+        android:layout_marginEnd="@dimen/marginLeftRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/child_middle_name_layout">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/child_last_name_edit"
+            android:layout_width="match_parent"
+            android:inputType="textCapCharacters"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:maxLength="40"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/father_first_name_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginLeftRight"
+        android:layout_marginTop="@dimen/marginTop"
+        android:hint="@string/father_first_name_CAP"
+        app:endIconMode="clear_text"
+        app:counterEnabled="true"
+        app:counterMaxLength="40"
+        android:layout_marginEnd="@dimen/marginLeftRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/child_last_name_layout">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/father_first_name_edit"
+            android:layout_width="match_parent"
+            android:inputType="textCapCharacters"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:maxLength="40"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/father_middle_name_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginLeftRight"
+        android:layout_marginTop="@dimen/marginTop"
+        android:hint="@string/father_middle_name_CAP"
+        app:endIconMode="clear_text"
+        app:counterEnabled="true"
+        app:counterMaxLength="40"
+        android:layout_marginEnd="@dimen/marginLeftRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/father_first_name_layout">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/father_middle_name_edit"
+            android:layout_width="match_parent"
+            android:inputType="textCapCharacters"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:maxLength="40"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/father_last_name_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginLeftRight"
+        android:layout_marginTop="@dimen/marginTop"
+        android:hint="@string/father_last_name_CAP"
+        app:endIconMode="clear_text"
+        app:counterEnabled="true"
+        app:counterMaxLength="40"
+        android:layout_marginEnd="@dimen/marginLeftRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/father_middle_name_layout">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/father_last_name_edit"
+            android:layout_width="match_parent"
+            android:inputType="textCapCharacters"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:maxLength="40"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/id_proof_father_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginLeftRight"
+        android:layout_marginTop="@dimen/marginTop"
+        android:layout_marginEnd="@dimen/marginLeftRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/father_last_name_layout">
+
+        <AutoCompleteTextView
+            android:id="@+id/id_proof_father_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:text="@string/id_proof_father"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/id_proof_reference_number_layout_1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginLeftRight"
+        android:layout_marginTop="@dimen/marginTop"
+        android:hint="@string/id_proof_reference_number"
+        app:endIconMode="clear_text"
+        app:counterEnabled="true"
+        app:counterMaxLength="40"
+        android:layout_marginEnd="@dimen/marginLeftRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_proof_father_layout">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/id_proof_reference_number_edit_1"
+            android:layout_width="match_parent"
+            android:inputType="text"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 "
+            android:maxLength="40"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/mother_first_name_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginLeftRight"
+        android:layout_marginTop="@dimen/marginTop"
+        android:hint="@string/mother_first_name_CAP"
+        app:helperText="required*"
+        app:helperTextTextColor="@android:color/holo_red_light"
+        app:endIconMode="clear_text"
+        app:counterEnabled="true"
+        app:counterMaxLength="40"
+        android:layout_marginEnd="@dimen/marginLeftRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_proof_reference_number_layout_1">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mother_first_name_edit"
+            android:layout_width="match_parent"
+            android:inputType="textCapCharacters"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:maxLength="40"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/mother_middle_name_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginLeftRight"
+        android:layout_marginTop="@dimen/marginTop"
+        android:hint="@string/mother_middle_name_CAP"
+        app:endIconMode="clear_text"
+        app:counterEnabled="true"
+        app:counterMaxLength="40"
+        android:layout_marginEnd="@dimen/marginLeftRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mother_first_name_layout">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mother_middle_name_edit"
+            android:layout_width="match_parent"
+            android:inputType="textCapCharacters"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:maxLength="40"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/mother_last_name_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginLeftRight"
+        android:layout_marginTop="@dimen/marginTop"
+        android:hint="@string/mother_last_name_CAP"
+        app:helperText="required*"
+        app:helperTextTextColor="@android:color/holo_red_light"
+        app:endIconMode="clear_text"
+        app:counterEnabled="true"
+        app:counterMaxLength="40"
+        android:layout_marginEnd="@dimen/marginLeftRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mother_middle_name_layout">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mother_last_name_edit"
+            android:layout_width="match_parent"
+            android:inputType="textCapCharacters"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:maxLength="40"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/id_proof_mother_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginLeftRight"
+        android:layout_marginTop="@dimen/marginTop"
+        android:layout_marginEnd="@dimen/marginLeftRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mother_last_name_layout">
+
+        <AutoCompleteTextView
+            android:id="@+id/id_proof_mother_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:text="@string/id_proof_of_mother"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/id_proof_reference_number_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginLeftRight"
+        android:layout_marginTop="@dimen/marginTop"
+        android:hint="@string/id_proof_reference_number"
+        app:endIconMode="clear_text"
+        app:counterEnabled="true"
+        app:counterMaxLength="40"
+        android:layout_marginEnd="@dimen/marginLeftRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_proof_mother_layout">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/id_proof_reference_number_edit"
+            android:layout_width="match_parent"
+            android:inputType="text"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 "
+            android:maxLength="40"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/mcts_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginLeftRight"
+        android:layout_marginTop="@dimen/marginTop"
+        android:hint="@string/mcts_registration_id"
+        app:endIconMode="clear_text"
+        app:counterEnabled="true"
+        app:counterMaxLength="40"
+        android:layout_marginEnd="@dimen/marginLeftRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_proof_reference_number_layout">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mcts_edit"
+            android:layout_width="match_parent"
+            android:inputType="text"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 "
+            android:maxLength="40"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/next_birth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/next"
+        android:layout_marginStart="@dimen/marginLeftRight"
+        android:layout_marginTop="@dimen/marginTop"
+        android:layout_marginEnd="@dimen/marginLeftRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mcts_layout"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+</layout>

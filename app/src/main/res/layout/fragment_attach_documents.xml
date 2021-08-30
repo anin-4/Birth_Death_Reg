@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:fillViewport="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".birth_details">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/authorization_letter_other"
+                android:textColor="@android:color/holo_red_light"
+                app:layout_constraintBottom_toTopOf="@id/file_choose_authorization"
+                app:layout_constraintEnd_toEndOf="@id/file_choose_authorization"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/file_choose_authorization" />
+
+
+            <Button
+                android:id="@+id/file_choose_authorization"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="36dp"
+                android:text="@string/choose_file"
+                app:icon="@drawable/ic_baseline_insert_drive_file_24"
+                app:layout_constraintEnd_toStartOf="@id/camera_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/camera_button"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/camera"
+                app:icon="@drawable/camera_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/file_choose_authorization"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/image_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/uploaded_image"
+                app:layout_constraintStart_toStartOf="@id/file_choose_authorization"
+                app:layout_constraintEnd_toEndOf="@id/camera_button"
+                app:layout_constraintTop_toBottomOf="@id/file_choose_authorization"
+                android:src="@mipmap/ic_launcher"
+                android:visibility="invisible"/>
+
+
+            <Button
+                android:id="@+id/delete_button_1"
+                android:layout_width="45dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:text="@string/delete"
+                android:visibility="invisible"
+                app:icon="@drawable/delete_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/image_1"
+                app:layout_constraintStart_toEndOf="@+id/image_1"
+                app:layout_constraintTop_toTopOf="@+id/image_1"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/informant_id_proof_other"
+                android:textColor="@android:color/holo_red_light"
+                app:layout_constraintBottom_toTopOf="@id/file_choose_informant"
+                app:layout_constraintEnd_toEndOf="@id/file_choose_informant"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/file_choose_informant" />
+
+            <Button
+                android:id="@+id/file_choose_informant"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="@dimen/marginLeftRight"
+                android:text="@string/choose_file_other"
+                app:icon="@drawable/ic_baseline_insert_drive_file_24"
+                app:layout_constraintEnd_toStartOf="@id/camera_button_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_1" />
+
+            <Button
+                android:id="@+id/camera_button_2"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/camera"
+                app:icon="@drawable/camera_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/file_choose_informant"
+                app:layout_constraintTop_toTopOf="@id/file_choose_informant" />
+            <ImageView
+                android:id="@+id/image_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/uploaded_image"
+                app:layout_constraintStart_toStartOf="@id/file_choose_informant"
+                app:layout_constraintEnd_toEndOf="@id/camera_button_2"
+                app:layout_constraintTop_toBottomOf="@id/file_choose_informant"
+                android:src="@mipmap/ic_launcher"
+                android:visibility="invisible"/>
+            <Button
+                android:id="@+id/delete_button_2"
+                android:layout_width="45dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:text="@string/delete"
+                android:visibility="invisible"
+                app:icon="@drawable/delete_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/image_2"
+                app:layout_constraintStart_toEndOf="@+id/image_2"
+                app:layout_constraintTop_toTopOf="@+id/image_2"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/other"
+                app:layout_constraintBottom_toTopOf="@id/file_choose_other"
+                app:layout_constraintEnd_toEndOf="@id/file_choose_other"
+                app:layout_constraintStart_toStartOf="@id/file_choose_other"
+                app:layout_constraintHorizontal_bias="0.0"
+                />
+
+            <Button
+                android:id="@+id/file_choose_other"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/choose_file"
+                app:icon="@drawable/ic_baseline_insert_drive_file_24"
+                app:layout_constraintEnd_toStartOf="@id/camera_button_3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_2" />
+            <Button
+                android:id="@+id/camera_button_3"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/camera"
+                app:icon="@drawable/camera_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/file_choose_other"
+                app:layout_constraintTop_toTopOf="@id/file_choose_other" />
+            <ImageView
+                android:id="@+id/image_3"
+                android:layout_width="0dp"
+                android:contentDescription="@string/uploaded_image"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@id/file_choose_other"
+                app:layout_constraintEnd_toEndOf="@id/camera_button_3"
+                app:layout_constraintTop_toBottomOf="@id/file_choose_other"
+                android:src="@mipmap/ic_launcher"
+                android:visibility="invisible"/>
+            <Button
+                android:id="@+id/delete_button_3"
+                android:layout_width="45dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:text="@string/delete"
+                android:visibility="invisible"
+                app:icon="@drawable/delete_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/image_3"
+                app:layout_constraintStart_toEndOf="@+id/image_3"
+                app:layout_constraintTop_toTopOf="@+id/image_3"
+                app:layout_constraintVertical_bias="0.5" />
+
+           <Button
+               android:id="@+id/submit_button"
+               app:layout_constraintTop_toBottomOf="@id/image_3"
+               app:layout_constraintStart_toStartOf="@id/file_choose_other"
+               app:layout_constraintEnd_toEndOf="@id/camera_button_3"
+               android:layout_height="wrap_content"
+               android:layout_width="wrap_content"
+               android:layout_marginTop="30dp"
+               android:gravity="center_horizontal"
+               android:text="@string/submit"
+               />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

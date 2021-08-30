@@ -1,0 +1,193 @@
+<resources>
+    <string name="app_name">birthDeathReg</string>
+    <string name="birth_details">BIRTH DETAILS</string>
+    <string name="address_details">ADDRESS DETAILS</string>
+    <string name="other_details">OTHER DETAILS</string>
+    <string name="attach_documents">ATTACH DOCUMENTS</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="gender">Gender</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="child_middle_name">Child Middle Name</string>
+    <string name="child_first_name">Child First Name</string>
+    <string name="child_last_name">Child Last Name</string>
+    <string name="father_first_name">Father First Name</string>
+    <string name="father_middle_name">father middle name</string>
+    <string name="mother_first_name">Mother First Name</string>
+    <string name="mother_last_name">Mother Last Name</string>
+    <string name="mother_middle_name">Mother Middle Name</string>
+    <string name="father_last_name">Father Last Name</string>
+    <string name="id_proof_of_mother">ID proof of mother</string>
+    <string name="id_proof_father">ID proof father</string>
+    <string name="id_proof_reference_number">ID Proof Reference Number</string>
+    <string name="religion_of_family">Religion Of Family</string>
+    <string name="father_education_level">Father Education Level</string>
+    <string name="father_education">Father Education</string>
+    <string name="mother_education_level">Mother Education Level</string>
+    <string name="mother_s_occupation">Mother\'s Occupation</string>
+    <string name="father_s_occupation">Father\'s Occupation</string>
+    <string name="cause_of_foetal_death">Cause Of Foetal Death</string>
+    <string name="mother_s_age_in_completed_age_at_time_of_marriage">Mother\'s Age(in completed age) at time of marriage</string>
+    <string name="age_of_mother_at_time_of_birth">Age of Mother at time of Birth</string>
+    <string name="number_of_children_born_alive_to_mother_including_current_child">Number Of Children born Alive to Mother including current Child</string>
+    <string name="type_of_attention_at_delivery">Type of attention at delivery</string>
+    <string name="method_of_delivery">Method Of delivery</string>
+    <string name="baby_weight_in_kg">Baby weight in Kg</string>
+    <string name="number_of_weeks_in_pregnancy">Number Of Weeks in Pregnancy</string>
+    <string name="bhubaneswar">BHUBANESWAR</string>
+    <string name="select_tahasil">Select Tahasil</string>
+    <string name="some_date">Some date</string>
+    <string name="permanent_address">Permanent Address</string>
+    <string name="address_line1">Address Line1</string>
+    <string name="address_line_2">Address Line 2</string>
+    <string name="address_line_3">Address Line 3</string>
+    <string name="select_country">Select Country</string>
+    <string name="select_state">Select State</string>
+    <string name="select_district">Select District</string>
+    <string name="pin">Pin</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="email_id">Email Id</string>
+    <string name="place_of_birth">Place Of Birth</string>
+    <string name="important_name_and_address">Important Name And Address</string>
+    <string name="address_of_parent_at_time_of_birth">Address Of Parent At Time Of Birth</string>
+    <string name="town_or_village_of_residence_of_mother">Town Or Village Of Residence Of Mother</string>
+    <string name="town_or_village">Town Or Village</string>
+    <string name="name_of_town_or_village">Name Of Town or Village</string>
+    <string name="informant_name">Informant Name</string>
+    <string name="same_as_permanent_address">Same As Permanent Address</string>
+    <string name="other">Other</string>
+    <string name="mcts_registration_id">MCTS Registration Id</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="proof_of_event">Proof Of Event</string>
+    <string name="miss_case">Miss Case</string>
+    <string name="memo_number">Memo Number</string>
+    <string name="order_number">Order Number</string>
+    <string name="remark">Remark</string>
+    <string name="child_first_name_CAP">CHILD FIRST NAME</string>
+    <string name="child_middle_name_CAP">CHILD MIDDLE NAME</string>
+    <string name="child_last_name_CAP">CHILD LAST NAME</string>
+    <string name="father_first_name_CAP">FATHER FIRST NAME</string>
+    <string name="father_middle_name_CAP">FATHER MIDDLE NAME</string>
+    <string name="father_last_name_CAP">FATHER LAST NAME</string>
+    <string name="mother_first_name_CAP">MOTHER FIRST NAME</string>
+    <string name="mother_middle_name_CAP">MOTHER MIDDLE NAME</string>
+    <string name="mother_last_name_CAP">MOTHER LAST NAME</string>
+    <string name="order_of_birth">Order of birth</string>
+    <string name="select_date">Select Date*</string>
+    <string name="calender">Calender</string>
+    <string name="registration_date">Registration Date</string>
+    <string name="date_of_birth_2">Date Of Birth*</string>
+    <string name="registration_unit">Registration Unit</string>
+    <string name="authorization_letter">Authorization Letter</string>
+    <string name="informant_id_proof">Informant ID proof</string>
+    <string name="required">Required*</string>
+    <string name="authorization_letter_other">Authorization Letter*</string>
+    <string name="informant_id_proof_other">Informant Id Proof</string>
+    <string name="choose_file">Choose File</string>
+    <string name="camera">Camera</string>
+    <string name="choose_file_other">Choose File</string>
+    <string name="submit">Submit</string>
+    <string name="uploaded_image">uploaded image</string>
+    <string name="delete">delete</string>
+
+
+    <!--    1. Gender :-->
+    <string-array name="gender">
+    <item>Male</item>
+    <item>Female</item>
+    <item>Transgender</item>
+    </string-array>
+
+
+<!--    2.Id_proof-->
+    <string-array name="id_proof_father">
+        <item>Pan Card</item>
+        <item>Passport</item>
+        <item>Driving Licence</item>
+        <item>Electricity Bill</item>
+        <item>Telephone Bill</item>
+        <item>Ration Card</item>
+        <item>Voter Id Card</item>
+        <item>Aadhar</item>
+    </string-array>
+<!--    3.Country-->
+    <string-array name="country">
+        <item>India</item>
+    </string-array>
+<!--    4.townOrVlg-->
+    <string-array name="townOrVillage">
+        <item>Village</item>
+        <item>Town</item>
+    </string-array>
+<!--    5.State-->
+    <string-array name="state">
+        <item>Odisha</item>
+    </string-array>
+<!--    7.Religion-->
+    <string-array name="religion_list">
+        <item>Hindu</item>
+        <item>Muslim</item>
+        <item>Sikh</item>
+        <item>Christian</item>
+        <item>Buddhism</item>
+        <item>Zorastrain</item>
+        <item>Others</item>
+    </string-array>
+<!--    8.Level of Education-->
+    <string-array name="level_of_education">
+        <item>Under High School</item>
+        <item>High School</item>
+        <item>Senior Secondary</item>
+        <item>Graduate</item>
+        <item>Post Graduate</item>
+        <item>Doctorate</item>
+    </string-array>
+<!--    9.Occupation-->
+    <string-array name="occupation">
+        <item>Unemployed</item>
+        <item>Self Employed</item>
+        <item>Farmer</item>
+        <item>Gov Employee</item>
+        <item>Corporate Employee</item>
+        <item>Defence Services</item>
+    </string-array>
+
+<!--    10.Cause of foetal death-->
+    <string-array name="cause_of_death_foetal">
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+<!--    11.type of attention-->
+    <string-array name="type_of_attention">
+        <item>Govt. Institutional</item>
+        <item>Pvt/Non Govt. Institutional</item>
+        <item>Doctor,Nurse or Trained Midwife</item>
+        <item>Traditional Birth Attendent</item>
+        <item>Relative or Other</item>
+        <item>Trained Birth Attendent</item>
+    </string-array>
+
+<!--   12.Method of delivery-->
+    <string-array name="method_of_delivery">
+        <item>Normal</item>
+        <item>Cesarean</item>
+        <item>Forceps/Vaccum</item>
+    </string-array>
+<!--   // 13.Proof of event-->
+    <string-array name="proof_of_event_">
+        <item>Authorization Letter</item>
+    </string-array>
+<!--    14.Miss case-->
+    <string-array name="miss_case">
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+
+    <string-array name="district">
+        <item>Khordha</item>
+        <item>Cuttack</item>
+        <item>Bhadhark</item>
+        <item>Angul</item>
+    </string-array>
+</resources>
